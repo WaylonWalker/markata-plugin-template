@@ -1,0 +1,37 @@
+_min_copier_version: v6.0.0b0
+_exclude:
+  - .gitignore
+  - .git
+  - copier.yml
+  - README.md
+
+# reverting to the old _endops allows to mix in jinja that will persist
+_envops:
+    autoescape: false
+    block_end_string: "%]"
+    block_start_string: "[%"
+    comment_end_string: "#]"
+    comment_start_string: "[#"
+    keep_trailing_newline: true
+    variable_end_string: ")]"
+    variable_start_string: "[("
+
+project_name:
+  type: str
+  help: Your project name (keep this the same as you used in the starter if you used one)
+
+plugin_name:
+  type: str
+  help: Your plugin name
+
+python_package_import_name:
+  type: str
+  help: Your Python package import name (for `import NAME` in Python code), this will be used to store plugins if you choose to make any.
+  default: "[( project_name|lower|replace('-', '_')|replace(' ', '_') )]"
+
+python_plugin_import_name:
+  type: str
+  help: Your Python plugin import name (for `from [( python_package_import_name )].plugins import NAME` in Python code) (also keep this the same if you 
+  default: "[( plugin_name|lower|replace('-', '_')|replace(' ', '_') )]"
+
+

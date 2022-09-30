@@ -1,0 +1,50 @@
+"""
+[( python_plugin_import_name )]
+
+Enable this plugin by adding it to your `markata.toml` hooks list.
+
+``` toml
+[markata]
+hooks=[
+  # your hooks
+  "[( python_package_import_name )].plugins.[( python_plugin_import_name )]",
+]
+```
+
+"""
+from markata.hookspec import hook_impl
+
+
+# @hook_impl
+# def configure(markata) -> None:
+#     print("running [( python_plugin_import_name )].glob")
+
+
+# @hook_impl
+# def load(markata) -> None:
+#     print("running [( python_plugin_import_name )].glob")
+
+
+# @hook_impl
+# def load(markata) -> None:
+#     print("running [( python_plugin_import_name )].load")
+
+
+# @hook_impl
+# def pre_render(markata) -> None:
+#     print("running [( python_plugin_import_name )].pre_render")
+
+
+# @hook_impl
+# def render(markata) -> None:
+#     print("running [( python_plugin_import_name )].render")
+
+
+# @hook_impl
+# def post_render(markata) -> None:
+#     print("running [( python_plugin_import_name )].post_render")
+
+
+# @hook_impl
+# def save(markata) -> None:
+#     print("running [( python_plugin_import_name )].save")
